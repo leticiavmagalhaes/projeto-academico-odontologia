@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: rgb(9, 35, 59);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(#000000, #001c58);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+
+    img {
+        height: 200px;
+        margin: 30px auto;
+    }
+}
+
+main {
+    >div {
+        display: flex;
+        justify-content: center;
+        margin: 50px auto;
+
+        form {
+
+            h1 {
+                color: #FFD700;
+                margin-bottom: 40px;
+                text-align: center;
+                font-size: 50px;
+                text-shadow: 0 5px 5px rgb(0, 0, 0);
+            }
+
+            p {
+                color: rgb(255, 255, 255);
+                padding: 20px;
+                text-align: center;
+                font-size: 25px;
+
+                /* botões de entrar e sair */
+                a {
+                    padding: 10px 20px;
+                    background-color: #001c58;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+                }
+
+                /* quando passar o mouse nos botões */
+                a:hover {
+                    padding: 15px 25px;
+                    background-color: #001c58;
+                    color: #FFD700;
+                    text-decoration: none;
+                    border-radius: 5px;
+                    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+                }
+            }
+        }
+    }
+
+    /* serve como um footer, para colorir a parte depois do login */
+    .margem {
+        height: 335px;
+        width: 100%;
+        background: linear-gradient(#001c58, #000000);
+        box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.5);
+        border-radius: 50px;
+    }
+}

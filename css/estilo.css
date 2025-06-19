@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* 
+font-family: "Roboto", sans-serif;
+font-family: "Anton", sans-serif;
+font-family: "Lobster", sans-serif;
+*/
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: radial-gradient(#000000, #001c58);
+}
+
+.site {
+    width: 100%;
+    max-width: 900px;
+    /*máximo 1200*/
+    margin: 0 auto;
+
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(#000000, #001c58);
+
+    .site {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 70px;
+            /* Tamanho da logo do header ;*/
+        }
+
+        h1 {
+            width: 280px;
+            height: 100px;
+            background: url(../img/logo1.png) no-repeat;
+            background-size: 100% 100%;
+            text-indent: -9999px;
+            /*indentação negativa para sumir da página*/
+            margin: 15px 0;
+        }
+
+        article {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: end;
+
+            nav ul {
+                display: flex;
+                align-items: center;
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(10px);
+                padding: 1rem 3rem;
+                font-family: "Anton", sans-serif;
+                font-size: 18px;
+                text-transform: uppercase;
+                justify-content: end;
+                height: 25px;
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+
+                li {
+                    margin: 2px;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        /*decoração do link, nenhuma - tira o sublinhado*/
+                        margin: 20px;
+                    }
+
+                    img {
+                        height: 25px;
+                        border: 2px solid rgb(255, 255, 255);
+                        border-radius: 50%;
+                    }
+
+                    a:hover {
+                        /*quando passar o mouse por cima*/
+                        color: #FFD700;
+                        font-size: 20px;
+
+                        /* faz alterações na imagem de login ao passar o mouse */
+                        img {
+                            height: 27px;
+                            border: 2px solid rgb(250, 225, 0);
+                            box-shadow: 0 4px 4px rgba(255, 255, 255, 0.5);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Main: ajustes do Banner principal*/
+main {
+
+    .banner {
+        display: flex;
+        height: 600px;
+        width: 100%;
+        justify-content: center;
+
+        /* botão esquerdo do banner */
+        .slick-prev {
+            left: 25px;
+            z-index: 99;
+        }
+
+        img {
+            display: flex;
+            width: 100%;
+            background: rgb(73, 28, 197);
+        }
+
+        /* botão direito do banner */
+        .slick-next {
+            right: 25px;
+            color: #401334;
+        }
+
+        /* alteração de ambos botões: tamanho, opacidade e cor */
+        .slick-prev:before,
+        .slick-next:before {
+            font-size: 30px;
+            opacity: .5;
+            color: #cec000;
+        }
+    }
+
+    /* Título e resumo do curso (Sobre)*/
+    .sobre {
+
+        .site {
+            display: flex;
+            margin-top: 80px;
+
+            >div {
+                flex-direction: column;
+                text-align: left;
+
+                h2 {
+                    font-size: 40px;
+                    height: 70px;
+                    font-style: oblique;
+                    color: white;
+                }
+
+                p {
+                    width: 730px;
+                    font-size: 25px;
+                    line-height: 30px;
+                    letter-spacing: 2px;
+                    padding: 10px;
+                    color: white;
+                    margin-bottom: 80px;
+                }
+            }
+
+            img {
+                width: 300px;
+                height: 300px;
+                border-radius: 100px;
+                box-shadow: 15px 15px 15px #000000;
+            }
+        }
+    }
+
+    /* Divs dos diferenciais do curso (Diferenciais)*/
+    .diferenciais {
+        display: flex;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        margin-bottom: 40px;
+        background: rgb(1, 5, 58);
+        border-radius: 30px;
+        background: white;
+
+        .site {
+            h2 {
+                margin-top: 50px;
+                text-align: center;
+                font-size: 50px;
+                color: #001c58;
+            }
+
+            /* Agrega todas as divs dos paragrafos em conjunto */
+            .paragrafos {
+                display: flex;
+                text-align: center;
+                justify-content: center;
+
+                div {
+                    display: flex;
+                    height: auto;
+                    width: 300px;
+                    padding: 15px;
+                    margin: 50px 20px;
+                    text-align: center;
+                    flex-direction: column;
+                    color: rgb(255, 255, 255);
+                    background: rgb(1, 5, 58);
+                    box-shadow: 15px 15px 15px #464646;
+                    border-radius: 30px;
+
+                    h4 {
+                        font-size: 25px;
+                        color: #FFD700;
+                        width: 200px;
+                        margin-bottom: 20px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Divs do corpo docente (Equipe)*/
+    .equipe {
+        background: #001c58;
+        padding: 50px 0;
+
+        .site {
+
+            h2 {
+                text-align: center;
+                margin-bottom: 40px;
+                color: aliceblue;
+                font-size: 35px;
+            }
+
+            >div {
+                display: flex;
+                justify-content: space-around;
+
+                div {
+                    width: 25%;
+                    text-align: center;
+                    padding: 20px;
+
+                    img {
+                        width: 200px;
+                        height: 200px;
+                        border-radius: 50%;
+                    }
+
+                    h3 {
+                        color: aliceblue;
+                        font-size: 30px;
+                        letter-spacing: 2px;
+                        line-height: 35px;
+                    }
+
+                    h4 {
+                        color: aliceblue;
+                        font-size: 25px;
+                        letter-spacing: 2px;
+                        line-height: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+
+    .info {
+        .site {
+            display: flex;
+            justify-content: center;
+
+            div {
+                display: flex;
+                height: 500px;
+                margin: 50px 50px;
+                background-color: #323d4e;
+                border-radius: 25px;
+                box-shadow: 15px 15px 15px #000000;
+            }
+
+            div:nth-child(1) {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+
+                img {
+                    width: 300px;
+                    margin-bottom: 30px;
+                    align-self: center;
+                }
+
+                h2 {
+                    color: white;
+                    font-size: 30px;
+                    letter-spacing: 3px;
+                    margin-bottom: 10px;
+
+                }
+
+                h3 {
+                    color: white;
+                    font-size: 30px;
+                    margin-bottom: 10px;
+
+                }
+            }
+
+            div:nth-child(2) {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+
+                iframe {
+                    justify-content: center;
+                    width: 300px;
+                    height: 250px;
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    color: white;
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+
+    .desenvolvedor {
+        background-color: #ffffff;
+        margin: 5px 0 0 0;
+        padding: 20px 0;
+        box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.5);
+
+        p {
+            text-align: center;
+            color: #001c58;
+            font-size: 20px;
+        }
+    }
+}
+
+/* RESPONSIVO */
+
+@media(max-width: 1024px) {
+    header {
+        .site {
+            article {
+                width: 70%;
+                padding: 1rem 1rem;
+            }
+        }
+    }
+
+    main {
+        .banner {
+            height: auto;
+        }
+
+        .sobre {
+            .site {
+                img {
+                    display: none;
+                }
+            }
+        }
+
+        .diferenciais {
+            .site {
+                .paragrafos {
+                    div {
+                        width: 190px;
+                    }
+
+                    div:nth-child(4) {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .equipe {
+            .site {
+                div {
+                    div {
+                        img {
+                            width: 100px;
+                            height: 100px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    footer {
+        .info {
+            .site {
+                div:nth-child(1) {
+                    width: 30%;
+
+                    h2 {
+                        font-size: 25px;
+                    }
+
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    header {
+        .site {
+            article {
+                nav ul {
+                    padding: 2rem 1rem;
+                }
+            }
+        }
+    }
+
+    main {
+        .banner {
+            height: auto;
+        }
+    }
+
+
+}
+
+@media(min-width: 481px) {
+
+    .abrirMenu,
+    .fecharMenu {
+        display: none;
+    }
+}
+
+@media(max-width: 480px) {
+    .menuAtivo {
+        header {
+            nav {
+                right: 0px !important;
+            }
+        }
+    }
+
+    header {
+
+        .site {
+            article {
+                .abrirMenu {
+                    background: url(../img/menu.png) no-repeat;
+                    width: 50px;
+                    height: 50px;
+                    background-size: 100% 100%;
+                    /*100% da altura e 100% da largura*/
+                    border: none;
+                    right: 5%;
+                    top: 3%;
+                    /* position: fixed; */
+
+                }
+
+                nav {
+                    position: fixed;
+                    height: 100%;
+                    z-index: 9999;
+                    background: #f1da0a71;
+                    top: 0;
+                    width: 50%;
+                    padding: 10px;
+                    max-width: 240px;
+                    right: -300px;
+                    transition: right 1s ease-out;
+
+                    .fecharMenu {
+                        background: url(../img/fechar.png) no-repeat;
+                        width: 50px;
+                        height: 50px;
+                        background-size: 100% 100%;
+                        /*100% da altura e 100% da largura*/
+                        border: none;
+                    }
+
+                    ul {
+                        flex-direction: column;
+                        height: auto;
+
+                        li {
+                            margin: 15px auto;
+                            font-size: 1.5em;
+                            /*como se fosse porcentagem 1 - 100% e 5 aumenta em 50% o padrão que estamos usando para a fonte*/
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        .banner {
+            height: auto;
+        }
+
+        .sobre {
+            .site {
+                div {
+                    width: 200px;
+
+                    h2 {
+
+                        margin-bottom: 90px;
+                    }
+
+                    p {
+                        width: 400px;
+                    }
+                }
+            }
+        }
+
+        .diferenciais {
+            .site {
+                .paragrafos {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+
+        .equipe {
+            .site {
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+            }
+        }
+    }
+
+    footer {
+        .info {
+            .site {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                div:nth-child(1) {
+                    width: 300px;
+                    height: 300px;
+
+                    img {
+                        width: 150px;
+                        height: 150px;
+                    }
+
+                    h2 {
+                        font-size: 20px;
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                    }
+                }
+
+                div:nth-child(2) {
+                    width: 300px;
+                    height: 300px;
+
+                    iframe {
+                        width: 300px;
+                        height: 200px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,226 @@
+body {
+    font-family: "Roboto", sans-serif;
+    background: radial-gradient(#000000, #001c58);
+}
+
+.site {
+    width: 100%;
+    max-width: 900px;
+    /*máximo 1200*/
+    margin: 0 auto;
+
+}
+
+header {
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(#000000, #001c58);
+
+    .site {
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 70px;
+            /* Tamanho da logo do header ;*/
+        }
+
+        h1 {
+            width: 280px;
+            height: 100px;
+            background: url(../img/logo1.png) no-repeat;
+            background-size: 100% 100%;
+            text-indent: -9999px;
+            /*identação negativa para sumir da página*/
+            margin: 15px 0;
+        }
+
+        article {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: end;
+
+            nav ul {
+                color: white;
+                display: flex;
+                align-items: center;
+                background: rgba(255, 255, 255, 0.15);
+                backdrop-filter: blur(10px);
+                padding: 1rem 3rem;
+                font-family: "Anton", sans-serif;
+                font-size: 18px;
+                text-transform: uppercase;
+                justify-content: end;
+                height: 25px;
+                border-radius: 30px;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
+
+                li {
+                    margin: 2px;
+
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        /*decoração do link, nenhuma - tira o sublinhado*/
+                        margin: 20px;
+                    }
+
+                    img {
+                        height: 30px;
+                        border: 2px solid rgb(255, 255, 255);
+                        border-radius: 50%;
+                    }
+
+                    a:hover {
+                        /*quando passar o mouse por cima*/
+                        color: #FFD700;
+
+                        /* faz alterações na imagem de login ao passar o mouse */
+                        img {
+                            height: 30px;
+                            border: 2px solid rgb(250, 225, 0);
+                            box-shadow: 0 4px 4px rgba(255, 255, 255, 0.5);
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.equipe {
+    background: #001c58;
+    padding: 50px 0;
+
+    .site {
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: aliceblue;
+            font-size: 35px;
+        }
+
+        >div {
+            display: flex;
+            text-align: center;
+            margin-bottom: 25px;
+
+            /* fundo da parte dos professores */
+            section {
+                display: flex;
+                text-align: center;
+                margin-bottom: 25px;
+                background: rgba(0, 0, 0, 0.589);
+                border-radius: 30px;
+                box-shadow: 0 15px 15px rgba(255, 255, 255, 0.5);
+
+                div {
+                    padding: 35px;
+
+                    h3 {
+                        color: white;
+                        font-size: 25px;
+                        margin-bottom: 10px;
+                    }
+
+                    img {
+                        border-radius: 50px;
+                        height: 200px;
+                        width: 200px;
+                        margin-bottom: 50px;
+                    }
+
+                    h4 {
+                        color: white;
+                        margin-bottom: 15px;
+                        font-size: 30px;
+                    }
+                }
+
+                div {
+                    p {
+                        padding: 20px;
+                        display: flex;
+                        justify-content: space-between;
+                        color: aliceblue;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                        line-height: 20px;
+                        margin-top: 50px;
+                    }
+
+                    a {
+                        color: #FFD700;
+                        font-size: 20px;
+                        text-decoration: none;
+                        text-shadow: 0 5px 5px rgb(0, 0, 0);
+                    }
+
+                    a:hover {
+                        font-size: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .rodape {
+        background-color: #ffffff;
+        margin: 5px 0 0 0;
+        padding: 20px 0;
+        box-shadow: 0 -15px 15px rgba(0, 0, 0, 0.5);
+
+        p {
+            font-size: 20px;
+            text-align: center;
+
+        }
+    }
+}
+
+@media(max-width:480px) {
+    header {
+        .site {
+            >img {
+                display: none;
+            }
+
+            article {
+                display: flex;
+                justify-content: center;
+
+                nav ul {
+                    font-size: 18px;
+                    padding: 2rem 0.2rem;
+                }
+            }
+        }
+    }
+
+    main {
+        .equipe {
+            .site {
+                >div {
+                    section {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5px;
+
+                        div {
+                            padding: 5px;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
